@@ -20,3 +20,7 @@ Route::get('/', function () {
 
 Route::get('/transactions', 'App\Http\Controllers\PagesController@transaction')->name('transaction');
 Route::get('/permissions', 'App\Http\Controllers\PagesController@permission')->name('permission');
+
+Auth::routes();
+
+Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
