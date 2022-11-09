@@ -16,3 +16,7 @@ use Illuminate\Support\Facades\Route;
 Route::get('/', function () {
     return view('welcome');
 });
+
+
+Route::get('/transactions', 'App\Http\Controllers\PagesController@transaction')->name('transaction');
+Route::get('/permissions', 'App\Http\Controllers\PagesController@permission')->name('permission');
