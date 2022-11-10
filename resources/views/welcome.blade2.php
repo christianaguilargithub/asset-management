@@ -1,5 +1,3 @@
-
-
 @extends('partials.footer')
 
 <!DOCTYPE html>
@@ -76,21 +74,7 @@
           </form>
         </div>
       </li>
-            <li class="nav-item">
-      @if (Route::has('login'))
-                <div class="hidden fixed top-0 right-0 px-6 py-4 sm:block" style="padding-left:400px;">
-                    @auth
-                        <a href="{{ url('/home') }}" class="text-sm text-gray-700 dark:text-gray-500 underline">Home</a>
-                    @else
-                        <a href="{{ route('login') }}" class="text-sm text-gray-700 dark:text-gray-500 underline">Log in</a>
 
-                        @if (Route::has('register'))
-                            <a href="{{ route('register') }}" class="ml-4 text-sm text-gray-700 dark:text-gray-500 underline">Register</a>
-                        @endif
-                    @endauth
-                </div>
-            @endif    
-            </li>
       <li class="nav-item">
         <a class="nav-link" data-widget="fullscreen" href="#" role="button">
           <i class="fas fa-expand-arrows-alt"></i>
@@ -137,19 +121,19 @@
             </a>
             <ul class="nav nav-treeview">
               <li class="nav-item">
-                <a href="/" class="nav-link">
+                <a href="#" class="nav-link active">
                   <i class="far fa-circle nav-icon"></i>
                   <p>Add asset</p>
                 </a>
               </li>
               <li class="nav-item">
-                <a href="#" class="nav-link active">
+                <a href="{{ route('transaction')}}" class="nav-link">
                   <i class="far fa-circle nav-icon"></i>
                   <p>Transactions</p>
                 </a>
               </li>
               <li class="nav-item">
-                <a href="{{route('permission')}}" class="nav-link">
+                <a href="{{ route('permission')}}" class="nav-link">
                   <i class="far fa-circle nav-icon"></i>
                   <p>Permissions</p>
                 </a>
@@ -178,7 +162,63 @@
     <!-- /.content-header -->
 
     <!-- Main content -->
-   transactions
+    <section class="content">
+      <div class="container-fluid">
+        <div class="row">
+          <div class="col-md-12">
+            <div class="card card-primary card-outline" >
+              <div class="card-header">
+                <h3 class="card-title">
+                  <i class="fas fa-edit"></i>
+                  Item
+                </h3>
+              </div>
+              <div class="card-body pad table-responsive">
+                <p>Various types of buttons. Using the base class <code>.btn</code></p>
+                <table class="table table-bordered text-center">
+                  <tr>
+                    <th>No.</th>
+                    <th>Name</th>
+                    <th>Image</th>
+                    <th>Description</th>
+                    <th>Action</th>
+               
+                  </tr>
+                  <tr>
+                    <td>
+                      1
+                    </td>
+                    <td>
+                    First Item
+                    </td>
+                    <td>
+                    <img src="" alt="">
+                    </td>
+                    <td>
+                      this will be a great app
+                    </td>
+                    <td>
+                      <button type="button" class="btn btn-block btn-default btn-flat">Default</button>
+                    </td>
+                   
+                  </tr>
+                 
+                </table>
+              </div>
+              <!-- /.card -->
+            </div>
+          </div>
+          <!-- /.col -->
+        </div>
+        <!-- ./row -->
+
+        
+
+          <!-- ./row -->
+        
+        <!-- /. row -->
+      </div><!-- /.container-fluid -->
+    </section>
     <!-- /.content -->
   </div>
   <!-- /.content-wrapper -->
@@ -227,4 +267,3 @@
 <script src="dist/js/pages/dashboard.js"></script>
 </body>
 </html>
-
